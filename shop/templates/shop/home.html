@@ -1,0 +1,25 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row mt-4" style="display: flex; justify-content: space-between">
+        {% for i in qs %}
+        <div class="mt-4 col-sm-6">
+            <div style="padding: 20px" class="card">
+                <h3>
+                    {{ i.title }}
+                </h3>
+                <p>
+                    {{ i.text }}
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
